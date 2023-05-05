@@ -9,15 +9,15 @@ const viability = characters
     calcLiving(item);
   });
 
-export function calcLiving(viability) {
+export default function calcLiving(viability) {
   const { health } = viability;
   if (health > 51) {
-    return "healthy";
+    return 'healthy';
   }
   if (health <= 50 && health >= 15) {
-    return "wounded";
+    return 'wounded';
   }
   if (health < 15 && health >= 0) {
-    return "critical";
+    return 'critical';
   }
 }
