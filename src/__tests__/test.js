@@ -1,4 +1,4 @@
-import calcLiving from "../app";
+import { calcLiving } from "../app";
 
 test.each([
   ["любитель", 8, "critical"],

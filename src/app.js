@@ -9,7 +9,7 @@ const viability = characters
     calcLiving(item);
   });
 
-export default function calcLiving(viability) {
+export function calcLiving(viability) {
   const { health } = viability;
   if (health > 51) {
     return "healthy";
@@ -20,4 +20,8 @@ export default function calcLiving(viability) {
   if (health < 15 && health >= 0) {
     return "critical";
   }
+}
+export default function showHealth(playersData) {
+  playersData.sort((x, y) => y.health - x.health);
+  return playersData;
 }
